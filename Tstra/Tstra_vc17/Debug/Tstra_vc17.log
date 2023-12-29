@@ -1,0 +1,5 @@
+﻿  Utilities.cpp
+d:\githubpro\tstra\global\globals.h(54): warning C4005: “TSTRA_DELETE”: 宏重定义
+  d:\githubpro\tstra\global\globals.h(48): note: 参见“TSTRA_DELETE”的前一个定义
+d:\githubpro\tstra\global\utilities.cpp(27): error C2491: “tstra::stringToFloat”: 不允许 dllimport 函数 的定义
+d:\githubpro\tstra\global\utilities.cpp(32): error C2491: “tstra::stringToDouble”: 不允许 dllimport 函数 的定义

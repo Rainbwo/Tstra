@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Global/headers",
+                "D:/Program Files/MATLAB/R2017a/extern/include",
+                "D:/Download/boost_1_84_0",
+                "D:/Download/boost_1_84_0/boost",
+                "D:/Download/boost_1_84_0/boost/**",
+                "D:/Download/boost_1_84_0/libs/geometry/doc/src/docutils/tools/doxygen_xml2qbk/contrib/rapidxml-1.13"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "C:/msys64/ucrt64/bin/g++.exe"
+        }
+    ],
+    "version": 4
+}

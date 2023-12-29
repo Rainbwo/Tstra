@@ -1,0 +1,14 @@
+# version
+cmake_minimum_required(VERSION 3.0)
+
+# project
+project(Tstra)
+
+aux_source_directory(. DIR_SRCS)
+
+set(Tstra_VERSION_MAJOR 1)
+set(Tstra_VERSION_MINOR 0)
+
+# library
+add_library(Tstra $(DIR_SRCS))
+
