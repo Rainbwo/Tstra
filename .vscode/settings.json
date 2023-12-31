@@ -62,4 +62,5 @@
     "C_Cpp.default.cStandard": "c11",
     "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
     "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "search.followSymlinks": false,
 }

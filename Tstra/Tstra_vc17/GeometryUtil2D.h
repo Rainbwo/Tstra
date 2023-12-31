@@ -61,10 +61,55 @@ namespace tstra
 		}
 	};
 
+	/**
+	 * @brief 
+	 * 
+	 * @param iProjAngles 
+	 * @param iProjDets 
+	 * @param fDetSize 
+	 * @param pfAngles 
+	 * @param pfExtraOffsets 
+	 * @return SParProjection* 
+	 */
 	SParProjection *genParProjections(unsigned int iProjAngles, unsigned int iProjDets, double fDetSize, const float *pfAngles, const float *pfExtraOffsets);
+	/**
+	 * @brief 
+	 * 
+	 * @param iProjAngles 
+	 * @param iProjDets 
+	 * @param fOriginSource 
+	 * @param fOriginDetector 
+	 * @param fDetSize 
+	 * @param pfAngles 
+	 * @param pfExtraOffsets 
+	 * @return SFanProjection* 
+	 */
 	SFanProjection *genFanProjections(unsigned int iProjAngles, unsigned int iProjDets, double fOriginSource, double fOriginDetector, double fDetSize, const float *pfAngles, const float *pfExtraOffsets);
-
+	/**
+	 * @brief Get the Par Parameters object
+	 * 
+	 * @param proj 
+	 * @param iProjDets 
+	 * @param fAngle 
+	 * @param fDetSize 
+	 * @param fOffset 
+	 * @return true 
+	 * @return false 
+	 */
 	bool getParParameters(const SParProjection &proj, unsigned int iProjDets, float &fAngle, float &fDetSize, float &fOffset);
+	/**
+	 * @brief Get the Fan Parameters object
+	 * 
+	 * @param proj 
+	 * @param iProjDets 
+	 * @param fAngle 
+	 * @param fOriginSource 
+	 * @param fOriginDetector 
+	 * @param fDetSize 
+	 * @param fOffset 
+	 * @return true 
+	 * @return false 
+	 */
 	bool getFanParameters(const SFanProjection &proj, unsigned int iProjDets, float &fAngle, float &fOriginSource, float &fOriginDetector, float &fDetSize, float &fOffset);
 }
 

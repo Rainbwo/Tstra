@@ -85,35 +85,120 @@ namespace tstra
          * @return false
          */
         bool getContentBool() const;
-
+        /**
+         * @brief Get the Content Array object
+         * 将节点以vector<string>的方式返回
+         * @return std::vector<std::string>
+         */
         std::vector<std::string> getContentArray() const;
-
+        /**
+         * @brief Get the Content Numerical Array object
+         * 将节点以vector<float32>的方式返回
+         * @return std::vector<float32>
+         */
         std::vector<float32> getContentNumericalArray() const;
-
+        /**
+         * @brief Get the Content Numerical Array Double object
+         * 将节点以vector<Double>的方式返回
+         * @return std::vector<double>
+         */
         std::vector<double> getContentNumericalArrayDouble() const;
-
+        /**
+         * @brief Is Attribute ?
+         *
+         * @param _sName
+         * @return true
+         * @return false
+         */
         bool hasAttribute(std::string _sName) const;
-
+        /**
+         * @brief
+         * Get attribute - STRING
+         * @param _sName 返回找到的sName节点
+         * @param _sDefaultValue 如果没有找到该节点，返回默认值
+         * @return std::string
+         */
         std::string getAttribute(std::string _sName, std::string _sDefaultValue = " ") const;
-
+        /**
+         * @brief Get the Attribute Numerical object
+         *
+         * @param _sName
+         * @param _fDefaultValue
+         * @return float32
+         */
         float32 getAttributeNumerical(std::string _sName, float32 _fDefaultValue = 0) const;
-
+        /**
+         * @brief Get the Attribute Numerical Double object
+         *
+         * @param _sName
+         * @param _fDefaultValue
+         * @return double
+         */
+        double getAttributeNumericalDouble(std::string _sName, double _fDefaultValue = 0) const;
+        /**
+         * @brief Get the Attribute Int object
+         *
+         * @param _sName
+         * @param _fDefaultValue
+         * @return int
+         */
         int getAttributeInt(std::string _sName, int _fDefaultValue = 0) const;
-
+        /**
+         * @brief Get the Attribute Bool object
+         *
+         * @param _sName
+         * @param _bDefaultValue
+         * @return true
+         * @return false
+         */
         bool getAttributeBool(std::string _sName, bool _bDefaultValue = false) const;
-
+        /**
+         * @brief
+         * Does this node contain an option with a certain key?
+         * @param _sKey
+         * @return true
+         * @return false
+         */
         bool hasOption(std::string _sKey) const;
-
+        /**
+         * @brief Get the Option object
+         * Get the value of an option within this XML Node
+         * @param _sKey option key
+         * @param _fDefaultValue value to return if key isn't found
+         * @return std::string _sDefaultValue if the option doesn't exist
+         */
         std::string getOption(std::string _sKey, std::string _fDefaultValue = "") const;
-
+        /**
+         * @brief Get the Option Numerical object
+         * Get the value of an option within this XML Node
+         * @param _sKey option key
+         * @param _fDefaultValue value to return if key isn't found
+         * @return float32 option value. _fDefaultValue if the option doesm't exist
+         */
         float32 getOptionNumerical(std::string _sKey, float32 _fDefaultValue = 0) const;
-
         int getOptionInt(std::string _sKey, int _fDefaultValue = 0) const;
-
+        /**
+         * @brief Get the Option Bool object
+         * Get the value of an option within this XML Node
+         * @param _sKey option key
+         * @param _bDefaultValue value to return if key isn't found
+         * @return true
+         * @return false
+         */
         bool getOptionBool(std::string _sKey, bool _bDefaultValue = false) const;
-
+        /**
+         * @brief Get the Option Numerical Array object
+         * Get the value of an option within this XML Node
+         * @param _sKey option key
+         * @return std::vector<float32> numerical array
+         */
         std::vector<float32> getOptionNumericalArray(std::string _sKey) const;
-
+        /**
+         * @brief Create a new XML node as a child to this one: &lt ... &gt;&lt;_sNodeName/&gt;</...&gt;
+         *
+         * @param _sNodeName the name of the new childnote
+         * @return XMLNode new child node
+         */
         XMLNode addChildNode(std::string _sNodeName);
 
         XMLNode addChildNode(std::string _sNodeName, std::string _sValue);
